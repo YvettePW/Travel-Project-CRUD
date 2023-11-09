@@ -3,10 +3,9 @@
 <img src="travelcrud.png" width='300'/>
 Through the use of Swagger, this travel exercise allows the user to Create, Read, and Delete travel destinations to a database and see what has been done.<br></br>
 To run this on your machine, download the files and follow these steps:<br>
-1. Open a terminal window. Type npm install swagger-jsdoc swagger-ui-express express nodemon<br>
-2. Type npm install -g nodemon<br>
-3. Type nodemon index.js<br>
-4. Go to localhost:4000/api-docs and run the desired CRUD functionality.
+1. Open a terminal window and navigate to the file folder.<br>
+2. Type nodemon index.js<br>
+3. Go to localhost:4000/api-docs and run your desired CRUD functionality.
 <br></br>
 Additional functionality that would be helpful to a user for future iterations would be to include even more different types of CRUD functionalities.<br></br>
 MIT License<br></br>
