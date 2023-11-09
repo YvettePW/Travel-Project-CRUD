@@ -1,0 +1,109 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0", 
+        "title": "My Travel Project CRUD",
+        "description": "My User Project Application API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:4000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Destinations",
+            "description": "API for users in the system"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+
+    "paths": {
+        "/destinations": {
+            "get": {
+                "tags": ["Destinations"],
+                "summary": "Get all Destinations in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Destination"
+                        }
+                    }
+                }
+            }
+        },
+        "/destination": {
+            "post": {
+                "tags": ["Destinations"],
+                "description": "Create new destination in system",
+                "parameters": [
+                    {
+                        "name": "destination",
+                        "in": "body",
+                        "description": "Destination that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/Destination"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New destination is created",
+                        "schema": {
+                            "$ref": "#/definitions/Destination"
+                        }
+                    }
+                }
+            }
+        },
+        "/destination/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID of destination that we want to delete",
+                    "type": "integer"
+                }
+            ],
+            "delete": {
+                "tags": ["Destinations"],
+                "responses": {
+                    "200": {
+                        "description": "Destination is deleted",
+                        "schema": {
+                            "$ref": "#/definitions/Destination"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Destination": {
+            "required": ["id","name"],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "uniqueItems": true
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
