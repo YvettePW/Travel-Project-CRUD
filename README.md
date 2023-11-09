@@ -1,7 +1,7 @@
 # Travel-Project-CRUD
 ## Travel Project CRUD
 <img src="travelcrud.png" width='300'/>
-Through the use of Swagger, this travel exercise allows the user to Create, Read, and Delete travel destinations to a database and see what has been done.<br></br>
+Through the use of Swagger, this travel exercise allows the user to Create, Read, and Delete travel destinations to a database and see the result.<br></br>
 To run this on your machine, download the files and follow these steps:<br>
 1. Open a terminal window and navigate to the file folder.<br>
 2. Type nodemon index.js<br>
